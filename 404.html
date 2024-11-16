@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="refresh" content="0; url=./index.html" />
-</head>
-<body>
-    Redirecting to <a href="./index.html">index.html</a>...
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirige toutes les routes vers index.html
+      var pathname = window.location.pathname;
+      var redirect = pathname.replace('/Portfolio2', ''); // Ajustez si votre "basename" est différent
+      window.location.replace('/Portfolio2/index.html?redirect=' + encodeURIComponent(redirect));
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
