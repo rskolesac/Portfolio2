@@ -1,24 +1,17 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const images = [
-    '/image/scolarité.webp',
-    '/image/football.webp',
-    '/image/mma.webp',
-    '/image/cinema.webp',
-    '/image/musique.webp',
-    '/image/design.webp',
+    `${process.env.PUBLIC_URL}/image/scolarité.webp`,
+    `${process.env.PUBLIC_URL}/image/football.webp`,
+    `${process.env.PUBLIC_URL}/image/mma.webp`,
+    `${process.env.PUBLIC_URL}/image/cinema.webp`,
+    `${process.env.PUBLIC_URL}/image/musique.webp`,
+    `${process.env.PUBLIC_URL}/image/design.webp`,
 ];
+
 const ImageContext = createContext();
 
 export const ImageProvider = ({ children }) => {
-    const images = [
-        '/image/scolarité.webp',
-        '/image/football.webp',
-        '/image/mma.webp',
-        '/image/cinema.webp',
-        '/image/musique.webp',
-        '/image/design.webp',
-    ];
 
     const [currentImage, setCurrentImage] = useState(images[0]);
     const [isCyclingFinished, setIsCyclingFinished] = useState(false);
