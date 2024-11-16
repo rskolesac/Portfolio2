@@ -26,9 +26,9 @@ function Navbar() {
                 </div>
                 <nav className="navbar-right">
                     <ul className="navbar-menu">
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="parcours">Parcours</a></li>
-                        <li><a href="cv">CV</a></li>
+                        <li><a href={`${process.env.PUBLIC_URL}/`}>Accueil</a></li>
+                        <li><a href={`${process.env.PUBLIC_URL}/parcours`}>Parcours</a></li>
+                        <li><a href={`${process.env.PUBLIC_URL}/cv`}>CV</a></li>
                     </ul>
                 </nav>
             </header>
