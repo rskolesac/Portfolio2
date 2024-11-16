@@ -71,7 +71,7 @@ function Hero() {
             {imageVisible && (
                 <DelayedRender delay={1500}>
                     <div className="hero-video-container">
-                        <img src={`${process.env.PUBLIC_URL}/image/cerisier.webp`}  alt='cerisier' style={{ width: "400px" }} />
+                        <img src={`${process.env.PUBLIC_URL}/image/cerisier.webp`} alt='cerisier' style={{ width: "400px" }} />
                     </div>
                 </DelayedRender>
             )}
