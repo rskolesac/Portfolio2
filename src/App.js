@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import AcceuilPage from "./Page/AcceuilPage";
-import { BrowserRouter, Routes, Route, useLocation, useNavigate, useEffect } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import "./assets/style.css"
 import "./assets/layout.css"
 import "./assets/parcours.css"
@@ -8,6 +8,7 @@ import "./assets/apropos.css"
 import AproposPage from './Page/AproposPage';
 import CVPage from "./Page/CVPage";
 import { ImageProvider } from './context/ImageContext';
+import { useEffect } from "react";
 
 function RedirectHandler() {
     const location = useLocation();
