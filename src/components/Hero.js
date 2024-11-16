@@ -71,7 +71,7 @@ function Hero() {
             {imageVisible && (
                 <DelayedRender delay={1500}>
                     <div className="hero-video-container">
-                        <img src='/image/cerisier.webp' alt='cerisier' style={{ width: "400px" }} />
+                        <img src={`${process.env.PUBLIC_URL}/image/cerisier.webp' alt='cerisier`} style={{ width: "400px" }} />
                     </div>
                 </DelayedRender>
             )}
@@ -79,19 +79,19 @@ function Hero() {
                 <DelayedRender delay={2000}>
                     <div className="Hero-list">
                         <ul>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? '/image/loaderSmall.png' : '/image/loader.png')}>
+                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 1
                             </li>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? '/image/loaderSmall.png' : '/image/loader.png')}>
+                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 2
                             </li>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? '/image/loaderSmall.png' : '/image/loader.png')}>
+                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 3
                             </li>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? '/image/loaderSmall.png' : '/image/loader.png')}>
+                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 4
                             </li>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? '/image/loaderSmall.png' : '/image/loader.png')}>
+                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 5
                             </li>
                         </ul>

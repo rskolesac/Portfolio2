@@ -4,7 +4,7 @@ function Parcours2() {
     return (
         <div className="parcours-container">
             <div className="parcours-content">
-            <ParcoursImages images={['/image/fond-parcours3.webp', '/image/fond-parcours4.webp']} />
+            <ParcoursImages images={['`${process.env.PUBLIC_URL}/image/fond-parcours3.webp`', '`${process.env.PUBLIC_URL}/image/fond-parcours4.webp`']} />
                 <div className="parcours-text">
 
                     <div className="parcours-section">

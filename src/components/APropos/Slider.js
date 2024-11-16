@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const images = [
-    '/image/scolarité.webp',
-    '/image/football.webp',
-    '/image/mma.webp',
-    '/image/cinema.webp',
-    '/image/musique.webp',
-    '/image/design.webp',
+    `${process.env.PUBLIC_URL}/image/scolarité.webp`,
+    `${process.env.PUBLIC_URL}/image/football.webp`,
+    `${process.env.PUBLIC_URL}/image/mma.webp`,
+    `${process.env.PUBLIC_URL}/image/cinema.webp`,
+    `${process.env.PUBLIC_URL}/image/musique.webp`,
+    `${process.env.PUBLIC_URL}/image/design.webp`,
 ];
+
 
 function Slider({ setImage }) {
 

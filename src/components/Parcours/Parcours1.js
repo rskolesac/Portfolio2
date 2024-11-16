@@ -4,7 +4,7 @@ function Parcours1() {
     return (
         <div className="parcours-container">
             <div className="parcours-content">
-            <ParcoursImages images={['/image/fond-parcours1.webp', '/image/fond-parcours2.webp']} />
+            <ParcoursImages images={[`${process.env.PUBLIC_URL}/image/fond-parcours1.webp`, `${process.env.PUBLIC_URL}/image/fond-parcours1.webp`]} />
                 <div className="parcours-text">
 
                     <div className="parcours-section">
@@ -25,7 +25,7 @@ function Parcours1() {
                     <div className="parcours-section">
                         <div className='etude-sup'>
                             <h3>Études Supérieures</h3>
-                            <img src="/image/mines-saint-etienne.png" />
+                            <img src={`${process.env.PUBLIC_URL}/image/mines-saint-etienne.png`}/>
                         </div>
                         <p>
                             Je suis un parcours en micro-électronique aux Mines de Saint Etienne (ISMIN) où j'ai approfondi mes connaissances en microélectronique
