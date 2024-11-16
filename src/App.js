@@ -11,7 +11,7 @@ import { ImageProvider } from './context/ImageContext';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/Portfolio2">
             <Routes>
                 <Route path="/" element={<AcceuilPage />} />
                 <Route path="/parcours" element={
