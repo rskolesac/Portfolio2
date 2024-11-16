@@ -1,0 +1,496 @@
+/* Conteneur de fond pour la section Hero et la Navbar */
+/* Home-page avec image de fond initiale */
+body {
+    padding: 0;
+    margin: 0;
+}
+.home-page {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.background-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #EEE;
+    background-size: cover;
+    z-index: 1; /* Derrière tout le contenu */
+    transition: opacity 0.3s ease-in-out; /* Transition pour rendre le fondu plus fluide */
+}
+
+
+
+/* Conteneur principal (le contenu) */
+
+
+.hero-background {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Couvre toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+}
+/* Section Hero - Prend toute la hauteur de l'écran */
+.hero-section {
+    position: relative;
+    min-height: 90vh;  
+    display: flex;
+    align-items: flex-start;
+    color: #000;
+    z-index: 2;
+}
+
+.hover-overlay {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-radius: 50%; /* Commence en forme de cercle */
+    transition: all 0.8s ease-in-out; /* Transition fluide */
+    z-index: 10000;
+    overflow: hidden;
+    opacity: 0; /* Initialement invisible */
+}
+
+.hover-overlay.active {
+    width: 100vw; /* Passe à la taille de l'écran */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    border-radius: 0; /* S'étend pour remplir l'écran */
+    opacity: 1; /* Devient visible */
+}
+
+.hover-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+
+/* Titre Hero en haut à gauche */
+.hero-title {
+    position: absolute;
+    top: 10%;
+    left: 60px;
+    font-size: 5em; /* Très gros titre */
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    z-index: 1;
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-description {
+    position: absolute;
+    top: 20%; /* Ajustez cette valeur selon l'espacement souhaité */
+    left: 60px; /* Alignez avec le titre */
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.hero-description p {
+    padding-right: 1em;
+    font-family: "Homemade Apple", cursive;
+    font-weight: 300; /* Poids léger pour un sous-titre */
+    font-size: 1.5em; /* Taille du texte */
+    color: #555; /* Couleur du texte */
+
+}
+
+
+
+
+/* Conteneur pour l'image en bas à gauche */
+.hero-video-container {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: #FFF; /* Change le fond en blanc */
+    padding: 10px; /* Ajoute un espace autour de l'image */
+    border-radius: 8px; /* Arrondit les coins pour un effet esthétique */
+}
+
+/* Liste volumineuse à droite */
+.Hero-list {
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    list-style: none;
+    padding: 0;
+    color: #000;
+}
+
+.Hero-list ul {
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.Hero-list li {
+    font-family: "Homemade Apple", cursive;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.Hero-list li:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1350px) {
+    .hero-title {
+        font-size: 4.0rem; /* Réduire la taille de la police */
+    }
+    .hero-video-container {
+        bottom: 20% !important;
+    }
+    .hero-video-container img{
+        width: 350px !important;
+    }
+}
+@media (max-width: 1050px) {
+    .hero-title {
+        font-size: 3.0rem; /* Réduire la taille de la police */
+    }
+    .hero-description  {
+        top: 18% !important;
+    }
+    .hero-video-container {
+        bottom: 25% !important;
+    }
+}
+
+@media (max-width: 820px) {
+    .hero-title {
+        font-size: 2.0rem; /* Réduire la taille de la police */
+    }
+    .hero-video-container img{
+        width: 300px !important;
+    }
+    .hero-description  {
+        top: 15% !important;
+    }
+    .hero-video-container {
+        bottom: 30% !important;
+    }
+    .Hero-list {
+        font-size: 0.6em !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero-title {
+        font-size: 1.0rem; /* Réduire la taille de la police */
+    }
+    .hero-description p {
+        font-size: 1em !important;
+    }
+    .hero-video-container {
+        bottom: 40% !important;
+    }
+    .hero-video-container img {
+        width: 200px !important;
+    }
+}
+
+.three-js-container {
+    position: fixed;
+    right: 0;
+    bottom: -2%;
+}
+
+/* Section À propos de moi */
+.about-section {
+    color: white;
+    position: relative; /* Conteneur relatif pour positionner les bulles */
+    height: 400vh;
+    overflow: hidden; /* Pour éviter le débordement si les bulles dépassent */
+    text-align: center;
+    z-index: 2;
+}
+
+/* Titre de la section */
+.about-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Conteneur de bulles */
+.bubbles-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style général des bulles */
+.bubble {
+    background-size: cover; /* L'image remplit complètement le conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-position: center; /* Centre l'image */
+    color: #333;
+    font-size: 1em;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(244, 243, 243, 0.9);
+    font-size: 12px;
+    border-radius: 5%;
+}
+
+.bubble.active {
+    transform: scale(1.2); /* Grossissement de 20% */
+}
+
+/* Positionnement en quinconce pour chaque bulle */
+.bubble1 {
+    top: 2%;
+    left: 5%;
+    background-image: url("../images/about1.png");
+}
+
+
+.bubble2 {
+    top: 20%;
+    right: 10%;
+    background-image: url("../images/about2.png");
+}
+
+.bubble3 {
+    top: 40%;
+    left: 10%;
+    background-image: url("../images/about3.png");
+}
+
+.bubble4 {
+    top: 60%;
+    right: 10%;
+    background-image: url("../images/about4.png");
+}
+
+.bubble-video {
+    top: 80%;
+    left: 10%;
+}
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* S'assure que la vidéo couvre toute la bulle */
+    transform: translate(-50%, -50%); /* Centre la vidéo */
+    z-index: -1; /* Place la vidéo derrière le contenu de la bulle */
+    border-radius: inherit;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 20%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Centre le texte parfaitement */
+    color: #000; /* Couleur du texte */
+    font-size: 1em; /* Taille du texte */
+    text-align: center; /* Centrer le texte */
+    z-index: 1; /* Assure que le texte est au-dessus de la vidéo */
+    font-family: "Caesar Dressing", system-ui;
+    font-size: 2em;
+    width: 100%;
+}
+
+/* Effet au survol */
+.bubble:hover {
+    transform: scale(1.1); /* Agrandissement de la bulle */
+}
+
+@media (max-width: 820px) {
+    .bubble {
+        width: 500px !important;
+        height: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .bubble {
+        width: 350px !important;
+        height: 200px;
+    }
+}
+.skill-section {
+    position: relative;
+    z-index: 3;
+    font-family: "Homemade Apple", cursive;
+}
+
+.skills-title {
+    color: #000;
+    font-size: 6rem;
+    padding-left: 30px;
+
+}
+
+.skill-item-container {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    border-radius: 2%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+.skill-icon {
+    width: 120px;
+    height: 120px;
+    margin-right: 100px;
+    border-radius: 50%; /* Ajoute des coins arrondis pour l'icône */
+}
+
+.skill-title {
+    font-size: 5em;
+    margin: 0;
+}
+
+.skill-details-container {
+    margin-left: 40%;
+    width: 200px; /* Largeur de la liste */
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-details {
+    font-family: 'Courier New', Courier, monospace;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill-detail-item {
+    padding: 5px;
+    border-radius: 3px;
+    color: #555;
+}
+
+.skill-index {
+    margin-left:auto;
+    font-size: 1em;
+    color: #555;
+    font-weight: bold;
+}
+
+.skill-footer {
+    color: #FFF;
+    margin-left: 100px;
+    font-family: "Nunito Sans";
+    font-size: 2em;
+}
+
+@media(max-width: 1420px) {
+    .skill-details-container {
+        margin-left: 30%;
+    }
+
+}
+
+
+@media(max-width: 1150px) {
+    .skills-title {
+        font-size: 4em !important;
+    }
+    .skill-title {
+        font-size: 4em;
+    }
+    .skill-details-container {
+        margin-left: 10% !important;
+    }
+    .skill-item-container {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+}
+
+@media(max-width: 850px) {
+    .skills-title {
+        font-size: 3em !important;
+    }
+    .skill-title {
+        font-size: 3em;
+    }
+    .skill-icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 50px;
+    }
+    .skill-item-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .skill-details-container {
+        margin-left: 20%;
+    }
+
+}
+
+@media(max-width: 600px) {
+    .skills-title {
+        font-size: 2em !important;
+    }
+    .skill-title {
+        font-size: 2em;
+    }
+    .skill-details-container {
+        font-size: 0.5em;
+        width: 150px;
+        margin-right: 10px;
+    }
+
+}

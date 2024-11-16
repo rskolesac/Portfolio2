@@ -1,0 +1,79 @@
+/* Styles communs de la navbar */
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: white;
+    z-index: 3;
+    font-family: "Homemade Apple", cursive;
+    width: 100%;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+/* Style par défaut pour les deux premières pages */
+.default-style .navbar-menu li a {
+    color: #000; /* Couleur pour Accueil et Parcours */
+}
+
+/* Style spécial pour la page CV */
+.cv-style .navbar-menu li a {
+    color: #ff6f61; /* Couleur pour la page CV */
+}
+
+.navbar-menu li a:hover {
+    color: #ff6f61;
+}
+
+@media (max-width: 768px) {
+    .navbar-typed {
+        font-size: 0.8rem; /* Réduire la taille de la police */
+    }
+}
+
+@media (max-width: 468px) {
+    .navbar-typed {
+        font-size: 0.4rem; /* Réduire la taille de la police */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
