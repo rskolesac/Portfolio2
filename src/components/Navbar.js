@@ -1,7 +1,7 @@
 import React from 'react';
 import DelayedRender from './DelayedRender';
 import { ReactTyped } from 'react-typed';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 function Navbar() {
     const location = useLocation();
@@ -26,9 +26,9 @@ function Navbar() {
                 </div>
                 <nav className="navbar-right">
                     <ul className="navbar-menu">
-                        <li><a href={`${process.env.PUBLIC_URL}/`}>Accueil</a></li>
-                        <li><a href={`${process.env.PUBLIC_URL}/parcours`}>Parcours</a></li>
-                        <li><a href={`${process.env.PUBLIC_URL}/cv`}>CV</a></li>
+                        <li><Link to="/">Accueil</Link></li>
+                        <li><Link to="/parcours">Parcours</Link></li>
+                        <li><Link to="/cv">CV</Link></li>
                     </ul>
                 </nav>
             </header>
