@@ -86,7 +86,7 @@ function About() {
                                 playsInline
                                 className="video-background"
                             >
-                                <source src="Portfolio2/video/stickman.mp4" type="video/mp4" />
+                                <source src="/video/stickman.mp4" type="video/mp4" />
                                 Votre navigateur ne supporte pas la balise vidéo.
                             </video>
                             <div className="text-overlay">Combattant et fan de sport de combat</div>

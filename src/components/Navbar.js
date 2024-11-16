@@ -14,7 +14,7 @@ function Navbar() {
         <DelayedRender delay={2000}>
             <header className={navbarClass}>
                 <div className="navbar-left">
-                    <img src="Portfolio2/image/robin.svg" alt="Logo" className="logo" />
+                    <img src="/image/robin.svg" alt="Logo" className="logo" />
                 </div>
                 <div className="navbar-typed">
                     <ReactTyped

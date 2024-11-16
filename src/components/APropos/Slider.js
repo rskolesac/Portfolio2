@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const images = [
-    'Portfolio2/image/scolarité.webp',
-    'Portfolio2/image/football.webp',
-    'Portfolio2/image/mma.webp',
-    'Portfolio2/image/cinema.webp',
-    'Portfolio2/image/musique.webp',
-    'Portfolio2/image/design.webp',
+    '/image/scolarité.webp',
+    '/image/football.webp',
+    '/image/mma.webp',
+    '/image/cinema.webp',
+    '/image/musique.webp',
+    '/image/design.webp',
 ];
 
 function Slider({ setImage }) {
