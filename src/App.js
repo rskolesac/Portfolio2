@@ -8,7 +8,6 @@ import "./assets/apropos.css"
 import AproposPage from './Page/AproposPage';
 import CVPage from "./Page/CVPage";
 import { ImageProvider } from './context/ImageContext';
-import { useEffect } from "react";
 
 function RedirectHandler() {
     const location = useLocation();
