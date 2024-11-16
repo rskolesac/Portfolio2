@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei';
 
 function Model() {
     const { scene } = useGLTF(`${process.env.PUBLIC_URL}/3D/Lightning.glb`);
+
     const modelRef = useRef();
 
     // Utilisation de useFrame pour faire tourner le modèle
