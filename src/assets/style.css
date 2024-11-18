@@ -42,6 +42,7 @@ body {
     position: relative;
     min-height: 90vh;  
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     color: #000;
     z-index: 2;
@@ -83,13 +84,13 @@ body {
 
 /* Titre Hero en haut à gauche */
 .hero-title {
-    position: absolute;
-    top: 10%;
-    left: 60px;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 0;
     font-size: 5em; /* Très gros titre */
     color: #000;
     font-weight: bold;
-    margin: 0;
     z-index: 1;
     font-family: "Homemade Apple", cursive;
     font-weight: 400;
@@ -97,10 +98,8 @@ body {
 }
 
 .hero-description {
-    position: absolute;
-    top: 20%; /* Ajustez cette valeur selon l'espacement souhaité */
-    left: 60px; /* Alignez avec le titre */
-    margin: 0;
+    position: relative;
+    margin-left: 7%;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -123,9 +122,8 @@ body {
 /* Conteneur pour l'image en bas à gauche */
 .hero-image-container {
     width: 70%;
-    position: absolute;
-    bottom: 0%;
-    left: 10%;
+    position: relative;
+    margin-left: 10%;
     background-color: #FFF; /* Change le fond en blanc */
     padding: 10px; /* Ajoute un espace autour de l'image */
     display: flex;
@@ -200,9 +198,6 @@ padding: 0.5em;
     .hero-title {
         font-size: 4.0rem; /* Réduire la taille de la police */
     }
-    .hero-video-container {
-        bottom: 10% !important;
-    }
     .hero-video-container img{
         width: 350px !important;
         height: 350px !important;
@@ -212,14 +207,8 @@ padding: 0.5em;
     .hero-title {
         font-size: 3.0rem; /* Réduire la taille de la police */
     }
-    .hero-description  {
-        top: 18% !important;
-    }
-    .hero-image-container {
-        bottom: 15% !important;
-    }
     .hero-image-container img{
-        bottom: 5% !important;
+
         width: 320px !important;
         height: 320px !important;
     }
@@ -236,12 +225,6 @@ padding: 0.5em;
         width: 300px !important;
         height: 300px !important;
     }
-    .hero-description  {
-        top: 15% !important;
-    }
-    .hero-image-container {
-        bottom: 20% !important;
-    }
     .Hero-list {
         font-size: 0.6em !important;
     }
@@ -254,21 +237,18 @@ padding: 0.5em;
         width: 250px !important;
         height: 250px !important;
     }
-    .hero-image-container {
-        bottom: 30%!important;
-    }
 }
 
 @media (max-width: 610px) {
     .hero-title {
-        font-size: 1.0rem; /* Réduire la taille de la police */
+        margin-top: 20%;
     }
     .hero-description p {
         font-size: 1em !important;
     }
     .hero-image-container {
         flex-direction: column;
-        width: 35%;
+        width: 40%;
     }
     .hero-image-container img {
         width: 200px !important;
@@ -279,11 +259,6 @@ padding: 0.5em;
     }
 }
 @media (max-width: 510px) {
-
-    .hero-image-container {
-        flex-direction: column;
-        bottom: 40% !important;
-    }
     .hero-image-container img {
         width: 150px !important;
         height: 150px !important;
@@ -291,33 +266,27 @@ padding: 0.5em;
     .hero-image-texte {
         font-size: 0.5em;
     }
+    .hero-title {
+        margin-top: 30%;
+    }
+}
+@media (max-width: 475px) {
+
+    .hero-image-container {
+        flex-direction: column;
+    }
+    .hero-image-container img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .hero-image-texte {
+        font-size: 0.5em;
+    }
+    .hero-title {
+        margin-top: 20%;
+    }
 }
 
-@media (max-height: 1040px) {
-    .hero-image-container {
-        bottom: 5%!important;
-    }
-}
-@media (max-height: 800px) {
-    .hero-image-container {
-        bottom: 2%!important;
-    }
-}
-@media (max-height: 700px) {
-    .hero-image-container {
-        bottom: 0%!important;
-    }
-}
-@media (max-height: 650px) {
-    .hero-image-container {
-        bottom: -15%!important;
-    }
-}
-@media (max-height: 550px) {
-    .hero-image-container {
-        bottom: -30%!important;
-    }
-}
 .three-js-container {
     position: fixed;
     right: 0;
