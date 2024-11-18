@@ -26,6 +26,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .slider {
@@ -56,7 +57,9 @@
 
 
 .slide-number {
-    align-self: flex-end;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
     font-size: 0.8em;
     color: #aaa;
     margin: 0;
@@ -67,6 +70,7 @@
     transition: opacity 0.5s ease;
     padding: 0;
     margin: 0;
+    font-family: "Playwrite FR Moderne";
 }
 
 .slide-text li {

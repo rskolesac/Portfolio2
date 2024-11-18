@@ -24,7 +24,7 @@ function Parcours2() {
                     </div>
 
                     <div className="parcours-section">
-                        <h3>Futur expériences</h3>
+                        <h3>Futures expériences</h3>
                         <p>
                             Mission de développement Freelance ?<br />
                             Stage de découverte de l'entreprise (2025),<br />

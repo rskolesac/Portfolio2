@@ -48,12 +48,22 @@
     margin-right: 200px;
     margin-left: 200px;
 }
+.parcours-images img {
+    transition: transform 0.3s ease, box-shadow 0.5s ease; /* Transition pour un effet fluide */
+}
 
 .parcours-image {
     width: 400px; /* Ajustez la largeur selon vos besoins */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte */
 }
+
+.parcours-images img:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Augmente légèrement la taille de l'image au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Ombre encore plus intense au survol */
+}
+
 
 
 .parcours-section {

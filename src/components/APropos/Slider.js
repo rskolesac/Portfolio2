@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const images = [
     `${process.env.PUBLIC_URL}/image/scolarité.webp`,
-    `${process.env.PUBLIC_URL}/image/football.webp`,
+    `${process.env.PUBLIC_URL}/image/informatique.webp`,
     `${process.env.PUBLIC_URL}/image/mma.webp`,
-    `${process.env.PUBLIC_URL}/image/cinema.webp`,
+    `${process.env.PUBLIC_URL}/image/trail.webp`,
     `${process.env.PUBLIC_URL}/image/musique.webp`,
     `${process.env.PUBLIC_URL}/image/design.webp`,
 ];
@@ -18,18 +18,18 @@ function Slider({ setImage }) {
             number: 1,
             content: "Scolarité",
             texte: {
-                info1: "Détails sur la scolarité",
-                info2: "Activités scolaires",
-                info3: "Réalisations académiques",
+                info1: "Baccalauréat scientifique",
+                info2: "classe prépa Ingénieur",
+                info3: "Mines de Saint Etienne (ISMIN)",
             },
         },
         {
             number: 2,
-            content: "Football",
+            content: "Informatique",
             texte: {
-                info1: "Iniesta",
-                info2: "Numero 10 technique",
-                info3: "Marseille",
+                info1: "Web developpement",
+                info2: "Cybersécurité",
+                info3: "programmation bas niveau",
             },
         },
         {
@@ -43,29 +43,29 @@ function Slider({ setImage }) {
         },
         {
             number: 4,
-            content: "Cinéma",
+            content: "Trails",
             texte: {
-                info1: "Westerns",
-                info2: "12 hommes en colères",
-                info3: "",
+                info1: "Escalade",
+                info2: "Randonné",
+                info3: "trek",
             },
         },
         {
             number: 5,
-            content: "Musique",
+            content: "Culture",
             texte: {
-                info1: "New wave",
-                info2: "House",
-                info3: "Piano",
+                info1: "Cinéma, film western, science-fiction",
+                info2: "Lecture, Polar, dystopie, voyage",
+                info3: "Musique, piano , house, nouvelle génération",
             },
         },
         {
             number: 6,
-            content: "Design",
+            content: "Art",
             texte: {
-                info1: "Moderne",
-                info2: "épuré",
-                info3: "",
+                info1: "Architecture moderne, épuré",
+                info2: "Dessin",
+                info3: "créeation diy",
             },
         },
     ];

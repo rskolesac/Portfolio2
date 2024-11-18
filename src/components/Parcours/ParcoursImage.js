@@ -10,15 +10,6 @@ function ParcoursImages({ images }) {
                     src={image}
                     alt={`Illustration ${index + 1}`}
                     className="parcours-image"
-                    animate={{
-                        x: [0, 10, -10, 0],
-                        y: [0, -10, 10, 0]
-                    }}
-                    transition={{
-                        repeat: Infinity,
-                        duration: 5,
-                        ease: "easeInOut",
-                    }}
                 />
             ))}
         </div>
