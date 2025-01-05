@@ -29,7 +29,7 @@ function Slider({ setImage }) {
             texte: {
                 info1: "Web developpement",
                 info2: "Cybersécurité",
-                info3: "programmation bas niveau",
+                info3: "Programmation bas niveau",
             },
         },
         {
@@ -47,25 +47,25 @@ function Slider({ setImage }) {
             texte: {
                 info1: "Escalade",
                 info2: "Randonné",
-                info3: "trek",
+                info3: "Trek",
             },
         },
         {
             number: 5,
             content: "Culture",
             texte: {
-                info1: "Cinéma, film western, science-fiction",
-                info2: "Lecture, Polar, dystopie, voyage",
-                info3: "Musique, piano , house, nouvelle génération",
+                info1: "Cinéma, Film Western, Science-fiction",
+                info2: "Lecture, Polar, Voyage",
+                info3: "Musique, Piano , House, Nouvelle génération",
             },
         },
         {
             number: 6,
             content: "Art",
             texte: {
-                info1: "Architecture moderne, épuré",
+                info1: "Architecture moderne, Epuré",
                 info2: "Dessin",
-                info3: "créeation diy",
+                info3: "Création diy",
             },
         },
     ];

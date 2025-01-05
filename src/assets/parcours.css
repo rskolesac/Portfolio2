@@ -4,7 +4,7 @@
     background-size: cover;
     background-attachment: fixed; /* Garde l'image de fond fixe */
     background-position: center;
-    background-color: rgba(255, 228, 196, 0.332);
+    background-color: white;
 }
 
 
@@ -88,7 +88,7 @@
 .parcours-text h3 {
     font-size: 1.75rem;
     color: #555;
-    font-family: "Homemade Apple", cursive;
+    font-family: "Montserrat", serif;
 }
 
 .parcours-text p, .parcours-text li {
