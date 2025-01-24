@@ -70,7 +70,7 @@
     transition: opacity 0.5s ease;
     padding: 0;
     margin: 0;
-    font-family: "Montserrat", serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .slide-text li {

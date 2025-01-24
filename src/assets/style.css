@@ -85,14 +85,14 @@ body {
 /* Titre Hero en haut à gauche */
 .hero-title {
     position: relative;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 5%;
     margin-bottom: 0;
     font-size: 5em; /* Très gros titre */
     color: #000;
     font-weight: bold;
     z-index: 1;
-    font-family: "Montserrat", serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
     font-style: normal;
 }
@@ -109,7 +109,7 @@ body {
 
 .hero-description p {
     padding-right: 1em;
-    font-family: "Montserrat", serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 300; /* Poids léger pour un sous-titre */
     font-size: 1.5em; /* Taille du texte */
     color: #555; /* Couleur du texte */
@@ -124,11 +124,9 @@ body {
     width: 70%;
     position: relative;
     margin-left: 10%;
-    background-color: #FFF; /* Change le fond en blanc */
+    background-color: inherit; /* Change le fond en blanc */
     padding: 10px; /* Ajoute un espace autour de l'image */
     display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(244, 243, 243, 0.9);
     transition: transform 0.3s ease-in-out;
     z-index: 4;
 }
@@ -166,7 +164,7 @@ padding: 0.5em;
 /* Liste volumineuse à droite */
 .Hero-list {
     position: absolute;
-    top: 30%;
+    top: 40%;
     right: 30px;
     list-style: none;
     padding: 0;
@@ -180,7 +178,7 @@ padding: 0.5em;
 }
 
 .Hero-list li {
-    font-family: "Montserrat", serif;
+    font-family: 'Courier New', Courier, monospace;
     list-style: none;
     margin-bottom: 10px;
     padding: 15px;
@@ -431,7 +429,7 @@ padding: 0.5em;
 .skill-section {
     position: relative;
     z-index: 3;
-    font-family: "Montserrat", serif;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
@@ -445,8 +443,8 @@ padding: 0.5em;
 .skill-item-container {
     margin-right: 100px;
     margin-left: 100px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ddd;
@@ -477,11 +475,8 @@ padding: 0.5em;
 
 .skill-details-container {
     position: absolute;
-    right: 10%;
+    right: 5%;
     width: 200px; /* Largeur de la liste */
-    border-left: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-details {
