@@ -9,8 +9,8 @@ function Parcours1() {
                             <div className='parcours-section-text'>
                                 <h3>1ère et 2ème Années d'Études</h3>
                                 <p>
-                                        J'ai obtenu mon baccalauréat scientifique mention très bien en 2022.
-                                        J'ai effectué mes deux premières années d'études en prépa PSI dans le XVème arrondissement de Paris.
+                                        J'ai obtenu mon baccalauréat scientifique mention très bien en 2022. <br/>
+                                        J'ai effectué mes deux premières années d'études en prépa PSI dans le XVème arrondissement de Paris.<br/>
                                         Ces années m'ont permis de développer de fortes méthodes de travail et ont cultivé ma curiosité.
                                 </p>
                             </div>

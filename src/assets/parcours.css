@@ -17,11 +17,10 @@
 }
 
 .scroll-slide {
-    flex: 0 0 100%; /* Chaque slide prend 100% de la largeur de l'écran */
-    scroll-snap-align: start; /* Aligne chaque slide au début */
-    display: flex;
-    justify-content: center;
+    display: block;
+    width: 100vw;
     align-items: center;
+    width: 100vw;
     padding: 20px;
 }
 
@@ -32,8 +31,8 @@
 }
 
 .parcours-container {
-    display: flex;
-    width: 100%;   
+    display: block;
+    width: 100vw;   
 }
 
 .parcours-content {
@@ -87,6 +86,18 @@
 .parcours-section-add img {
     width: 100%;
     height: 200px;
+}
+.list-stage-img {
+    display: flex;
+    flex-direction: row;
+}
+.list-stage-img img{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    
 }
 .parcours-text {
     padding-top: 30px;
