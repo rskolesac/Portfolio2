@@ -78,7 +78,6 @@ body {
 .hero-content {
     position: relative;
     width: 100%;
-    height: 100%;
     color: #000;
 }
 
@@ -150,9 +149,13 @@ body {
     transition: transform 0.5s ease-in-out; /* Transition douce pour l'effet */
 }
 
+.hero-image-texte ul {
+    padding: 0;
+}
 .hero-image-texte ul li {
-list-style: none;
-padding: 0.5em;
+    list-style: none;
+    padding: 0.5em;
+
 }
 
 
@@ -164,7 +167,7 @@ padding: 0.5em;
 /* Liste volumineuse à droite */
 .Hero-list {
     position: absolute;
-    top: 40%;
+    top: 80%;
     right: 30px;
     list-style: none;
     padding: 0;
@@ -182,7 +185,6 @@ padding: 0.5em;
     list-style: none;
     margin-bottom: 10px;
     padding: 15px;
-    border-radius: 8px;
     font-size: 1em;
     transition: transform 0.3s;
     cursor: pointer;
@@ -203,12 +205,15 @@ padding: 0.5em;
 }
 @media (max-width: 1050px) {
     .hero-title {
-        font-size: 3.0rem; /* Réduire la taille de la police */
+        margin-top: 17%;
+    }
+    .hero-content {
+        margin-bottom: 7%;
     }
     .hero-image-container img{
 
-        width: 320px !important;
-        height: 320px !important;
+        width: 340px !important;
+        height: 340px !important;
     }
     .hero-image-texte {
         margin-left: 7%!important;
@@ -235,6 +240,9 @@ padding: 0.5em;
         width: 250px !important;
         height: 250px !important;
     }
+    .Hero-list li {
+        padding: 5px;
+    }
 }
 
 @media (max-width: 610px) {
@@ -244,10 +252,7 @@ padding: 0.5em;
     .hero-description p {
         font-size: 1em !important;
     }
-    .hero-image-container {
-        flex-direction: column;
-        width: 40%;
-    }
+
     .hero-image-container img {
         width: 200px !important;
         height: 200px !important;
@@ -447,6 +452,7 @@ padding: 0.5em;
     padding-bottom: 30px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #ddd;
     border-radius: 2%;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -465,7 +471,6 @@ padding: 0.5em;
     width: 120px;
     height: 120px;
     margin-right: 100px;
-    border-radius: 50%; /* Ajoute des coins arrondis pour l'icône */
 }
 
 .skill-title {
@@ -474,9 +479,10 @@ padding: 0.5em;
 }
 
 .skill-details-container {
-    position: absolute;
-    right: 5%;
     width: 200px; /* Largeur de la liste */
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .skill-details {
@@ -486,6 +492,7 @@ padding: 0.5em;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin: 0;
 }
 
 .skill-detail-item {
@@ -495,7 +502,10 @@ padding: 0.5em;
 }
 
 .skill-index {
-    margin-left:auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
     font-size: 1em;
     color: #555;
     font-weight: bold;
@@ -523,9 +533,6 @@ padding: 0.5em;
     .skill-title {
         font-size: 4em;
     }
-    .skill-details-container {
-        margin-left: 10% !important;
-    }
     .skill-item-container {
         margin-left: 70px;
         margin-right: 70px;
@@ -549,10 +556,6 @@ padding: 0.5em;
         margin-left: 50px;
         margin-right: 50px;
     }
-    .skill-details-container {
-        font-size: 0.7em !important;
-        width: 100px;
-    }
 
 }
 
@@ -568,4 +571,11 @@ padding: 0.5em;
         width: 150px !important;
     }
 
+}
+
+@media(max-width: 500px) {
+    .skill-item-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

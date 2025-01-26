@@ -27,7 +27,7 @@ function Navbar() {
                 <nav className="navbar-right">
                     <ul className="navbar-menu">
                         <li><Link to="/">Accueil</Link></li>
-                        <li><Link to="/parcours">Parcours</Link></li>
+                        <li><Link to="/parcours">Projets</Link></li>
                         <li><Link to="/cv">CV</Link></li>
                     </ul>
                 </nav>

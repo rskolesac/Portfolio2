@@ -7,19 +7,19 @@ function Skill() {
     const skills = {
         React: {
             items: ['Hooks', 'Components', 'State Management', 'Routing'],
-            imageSrc: `${process.env.PUBLIC_URL}/image/React.webp`
+            imageSrc: `${process.env.PUBLIC_URL}/image/react.png`
         },
         NodeJs: {
             items: ['Express', 'Middleware', 'REST APIs', 'WebSockets'],
-            imageSrc: `${process.env.PUBLIC_URL}/image/NodeJs.webp`
+            imageSrc: `${process.env.PUBLIC_URL}/image/node.webp`
         },
         SQL: {
             items: ['Queries', 'Joins', 'Indexing', 'Database Design'],
-            imageSrc: `${process.env.PUBLIC_URL}/image/Sql.webp`
+            imageSrc: `${process.env.PUBLIC_URL}/image/sql.png`
         },
         C: {
             items: ['Pointers', 'Memory Management', 'Data Structures', 'Algorithms'],
-            imageSrc: `${process.env.PUBLIC_URL}/image/C.webp`
+            imageSrc: `${process.env.PUBLIC_URL}/image/C.jpeg`
         }
     };
 

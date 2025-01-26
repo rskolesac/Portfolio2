@@ -21,9 +21,9 @@ function SkillItem({ skill, items, isActive, onClick, imageSrc, index }) {
                             <li key={idx} className="skill-detail-item">{item}</li>
                         ))}
                     </ul>
+                    <p className="skill-index">0{index + 1}</p> {/* Affichage du numéro */}
                 </motion.div>
             )}
-            <p className="skill-index">0{index + 1}</p> {/* Affichage du numéro */}
         </div>
     );
 }

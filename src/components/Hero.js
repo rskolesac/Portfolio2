@@ -74,13 +74,15 @@ function Hero() {
                         <img src={`${process.env.PUBLIC_URL}/image/robin.png`} alt='cerisier' style={{ width: "400px" }} />
                         <div className='hero-image-texte'>
                             <h2>CRF DEV</h2>
-                            <p>Je suis un développeur amateur passionné qui travaille sur divers projets.</p>
-                            <ul className='hero-image-list'>
-                                <li>Developpement web</li>
-                                <li>UX Design</li>
-                                <li>sécurité web</li>
-                                <li>architecture informatique</li>
-                            </ul>
+                            <div className='hero-image-list-container'>
+                                <p>Je suis un développeur amateur passionné qui travaille sur divers projets.</p>
+                                <ul className='hero-image-list'>
+                                    <li>Developpement web</li>
+                                    <li>UX Design</li>
+                                    <li>sécurité web</li>
+                                    <li>architecture informatique</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </DelayedRender>

@@ -16,56 +16,69 @@ function Slider({ setImage }) {
     const slides = [
         {
             number: 1,
-            content: "Scolarité",
+            content: "Scolaire",
             texte: {
-                info1: "Baccalauréat scientifique",
-                info2: "classe prépa Ingénieur",
-                info3: "Mines de Saint Etienne (ISMIN)",
+                info1: "Diplome d'ingénieur",
+                info2: "Mines de Saint-Etienne",
+                info3: "Double diplome à l'international",
             },
         },
         {
             number: 2,
-            content: "Informatique",
+            content: "E-commerce",
             texte: {
-                info1: "Web developpement",
-                info2: "Cybersécurité",
-                info3: "Programmation bas niveau",
+                info1: "Ouverture de mon site Ecandia",
+                info2: "Site construit intégralement à la main",
+                info3: "Technologies : React pour la partie frontend, Node JS pour l'API et SQL pour la base de donnée", 
+                info4: "Intégration d'un module de paiement avec Stripe, système de mailing automatisé avec NodeMail",
+                info5: "Gestion des comptes clients de façon sécurisée",
             },
         },
         {
             number: 3,
-            content: "Sport de combat",
+            content: "Analyse de donnée",
             texte: {
-                info1: "Boxe anglaise",
-                info2: "Grappling",
-                info3: "MMA",
+                info1: "Création d'un pipeline automatique pour alerter sur la qualité des données.",
+                info2: "Critères à vérifier :",
+                info3: "Complétude, Temporalité, Intégrité, Doublons",
+                info4: "Utilisation de librairie python :",
+                info5: "pandas / great_expectations",
+                info6: "Création du pipeline lors de mon stage de 1 mois chez Skiils",
             },
         },
         {
             number: 4,
-            content: "Trails",
+            content: "Cyber-sécurité",
             texte: {
-                info1: "Escalade",
-                info2: "Randonné",
-                info3: "Trek",
+                info1: "Apprentissage des bases de la sécurité numérique",
+                info2: "Sécurité en ligne et sécurité des réseaux",
+                info3: "Découverte de la configuration d'environnement pour stocker les données sensibles",
+                info4: "Découverte des différentes failles informatiques (injection sql, man-in-the-middle...)",
+                info5: "Maitrise des protocoles de bases (TCP/IP, FTP, Ternel, HTTP/HTTPS)",
+                info6: "Manipulation d'outils pour l'analyse réseaux (WireShark, Netcat)",
+                info7: "exercice pratique sur les plateformes rootMe, tryhackMe et la vm Metasploitable"
             },
         },
         {
             number: 5,
-            content: "Culture",
+            content: "Sports",
             texte: {
-                info1: "Cinéma, Film Western, Science-fiction",
-                info2: "Lecture, Polar, Voyage",
-                info3: "Musique, Piano , House, Nouvelle génération",
+                info1: "MMA, entrainements et combats amateur",
+                info2: "Trek, Tanzanie : Kilimandjaro, Grêce : Crête, Norvège: Iles Lofoten",
             },
         },
         {
             number: 6,
-            content: "Art",
+            content: "Voyage",
             texte: {
-                info1: "Architecture moderne, Epuré",
-                info2: "Dessin",
-                info3: "Création diy",
+                info1: "Europe :",
+                info2: "France, Espagne, Italie, Grêce, Ecosse, Norvège, Danemark, Hongrie, Autriche, ",
+                info3: "Afrique :",
+                info4: "Senegal, Tanzanie",
+                info5: "Amérique",
+                info6: "Etats-Unis, Brésil",
+                info7: "Asie :",
+                info8: "Jordanie"
             },
         },
     ];
@@ -127,9 +140,11 @@ function Slider({ setImage }) {
                     <p className='slide-content'>{slide.content}</p>
                     <p className="slide-number">0{slide.number}</p>
                     <ul className="slide-text">
-                        <li>{slide.texte.info1}</li>
-                        <li>{slide.texte.info2}</li>
-                        <li>{slide.texte.info3}</li>
+                        {Object.entries(slide.texte).map(([key, value], index) => (
+                            <li key={index}>
+                                {value}
+                            </li>
+                        ))}
                     </ul>
                 </motion.div>
             ))}
