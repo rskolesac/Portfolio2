@@ -1,5 +1,4 @@
 import React from 'react';
-import ParcoursImages from './ParcoursImage';
 function Parcours2() {
     return (
         <div className="parcours-container">
@@ -17,9 +16,9 @@ function Parcours2() {
                         </div>
                         <div className='parcours-section-add'>
                             <ul className='list-stage-img'>
-                                <img src={`${process.env.PUBLIC_URL}/image/TF1.jpeg`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/konbini.jpeg`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/skiils.svg`}/>
+                                <img src={`${process.env.PUBLIC_URL}/image/TF1.jpeg`} alt="TF1"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/konbini.jpeg`} alt="konbini"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/skiils.svg`} alt="skiils"/>
                             </ul>
                         </div>
                     </div>
@@ -34,8 +33,8 @@ function Parcours2() {
                         </div>
                         <div className='parcours-section-add'>
                             <ul className='list-stage-img'>
-                                <img src={`${process.env.PUBLIC_URL}/image/seehaus.svg`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/fiver.png`}/>
+                                <img src={`${process.env.PUBLIC_URL}/image/seehaus.svg`} alt="seehauss"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/fiverr.png`} alt="fiverr"/>
                             </ul>
                         </div>
                     </div>

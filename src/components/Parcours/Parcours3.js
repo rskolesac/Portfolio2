@@ -1,5 +1,4 @@
 import React from 'react';
-import ParcoursImages from './ParcoursImage';
 function Parcours2() {
     return (
         <div className="parcours-container">
@@ -17,9 +16,9 @@ function Parcours2() {
                         </div>
                         <div className='parcours-section-add'>
                             <ul className='list-stage-img'>
-                                <img src={`${process.env.PUBLIC_URL}/image/react.png`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/vue.jpeg`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/node.webp`}/>
+                                <img src={`${process.env.PUBLIC_URL}/image/react.png`} alt="react"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/vue.jpeg`} alt="vue"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/node.webp`} alt="node"/>
                             </ul>
                         </div>
                     </div>
@@ -35,9 +34,9 @@ function Parcours2() {
                         </div>
                         <div className='parcours-section-add'>
                             <ul className='list-stage-img'>
-                                <img src={`${process.env.PUBLIC_URL}/image/ux.webp`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/stripe.png`}/>
-                                <img src={`${process.env.PUBLIC_URL}/image/rootme.jpeg`}/>
+                                <img src={`${process.env.PUBLIC_URL}/image/ux.webp`} alt="ux"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/stripe.png`} alt="stripe"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/rootme.jpeg`} alt="rootme"/>
                             </ul>
                         </div>
                     </div>

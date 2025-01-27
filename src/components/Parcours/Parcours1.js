@@ -1,5 +1,4 @@
 import React from 'react';
-import ParcoursImages from './ParcoursImage';
 function Parcours1() {
     return (
         <div className="parcours-container">
@@ -15,7 +14,7 @@ function Parcours1() {
                                 </p>
                             </div>
                             <div className='parcours-section-add'>
-                                <img src={`${process.env.PUBLIC_URL}/image/buffon.jpeg`}/>
+                                <img src={`${process.env.PUBLIC_URL}/image/buffon.jpeg`} alt="lycée Buffon"/>
                             </div>
                         </div>
                         <div className="parcours-section">
@@ -27,7 +26,7 @@ function Parcours1() {
                                 </p>
                             </div>
                             <div className='parcours-section-add'>
-                                    <img src={`${process.env.PUBLIC_URL}/image/mines-saint-etienne.png`}/>
+                                    <img src={`${process.env.PUBLIC_URL}/image/mines-saint-etienne.png`} alt="Mines Saint Etienne"/>
                             </div>
                         </div>
                         <div className="parcours-section">

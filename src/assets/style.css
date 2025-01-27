@@ -289,11 +289,6 @@ body {
     }
 }
 
-.three-js-container {
-    position: fixed;
-    right: 0;
-    bottom: -2%;
-}
 
 /* Section À propos de moi */
 .about-section {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/style.css';
-import Lightning from './Three/Lightning'; // Assurez-vous que le chemin est correct
 import { ReactTyped } from 'react-typed';
 import DelayedRender from './DelayedRender';
 
@@ -64,9 +63,6 @@ function Hero() {
                         </div>
                     </DelayedRender>
                 )}
-                <div className="three-js-container">
-                    <Lightning />
-                </div>
             </div>
             {imageVisible && (
                 <DelayedRender delay={1500}>
