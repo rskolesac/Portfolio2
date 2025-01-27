@@ -34,7 +34,7 @@ function Parcours2() {
                         <div className='parcours-section-add'>
                             <ul className='list-stage-img'>
                                 <img src={`${process.env.PUBLIC_URL}/image/seehaus.svg`} alt="seehauss"/>
-                                <img src={`${process.env.PUBLIC_URL}/image/fiverr.png`} alt="fiverr"/>
+                                <img src={`${process.env.PUBLIC_URL}/image/fiver.png`} alt="fiverr"/>
                             </ul>
                         </div>
                     </div>
