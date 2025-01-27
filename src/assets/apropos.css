@@ -27,7 +27,7 @@
 }
 
 .slider {
-    padding-top: 10%;
+    margin-top: 10%;
     width: 40%; /* Ajuste selon ton besoin */
     color: white;
     overflow-x: hidden; /* Pas de défilement horizontal */
