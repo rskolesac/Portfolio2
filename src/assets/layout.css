@@ -1,6 +1,7 @@
 /* Styles communs de la navbar */
 .navbar {
     position: absolute;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

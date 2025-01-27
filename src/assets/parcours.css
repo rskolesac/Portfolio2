@@ -94,8 +94,8 @@
 .list-stage-img img{
     display: flex;
     flex-direction: row;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     padding: 1em;
     
 }
@@ -147,9 +147,6 @@
     .parcours-image {
         width: 350px; /* Ajustez la largeur selon vos besoins */
     }
-    .parcours-section h3 {
-        font-size: 1.25em;
-    }
     .etude-sup img {
         width: 100px;
     }
@@ -171,6 +168,7 @@
         margin-right: 150px;
         margin-left: 150px;
     }
+
 }
 
 @media (max-width: 1050px) {
@@ -178,17 +176,20 @@
         margin-right: 100px;
         margin-left: 100px;
     }
+    .parcours-section-add img {
+        height: 150px;
+    }
+    .list-stage-img {
+        flex-direction: column;
+    }
+    .list-stage-img img {
+        height: 100px;
+    }
 }
 
 @media (max-width: 930px) {
     .parcours-image {
         width: 250px; /* Ajustez la largeur selon vos besoins */
-    }
-    .parcours-section h3 {
-        font-size: 0.75em;
-    }
-    .parcours-text p, .parcours-text li {
-        font-size: 0.6rem;
     }
     .parcours-images {
         margin-right: 50px;
@@ -211,6 +212,12 @@
     .parcours-section {
         margin-right: 50px !important;
     }
+    .parcours-section-add img {
+        height: 120px;
+    }
+    .list-stage-img img {
+        height: 80px;
+    }
 }
 @media (max-width: 650px) {
     .parcours-images {
@@ -220,6 +227,16 @@
     .parcours-image {
         width: 150px; /* Ajustez la largeur selon vos besoins */
     }
+    .list-stage-img img {
+        height: 70px;
+    }
+    .parcours-section h3 {
+        font-size: 1.0em !important;
+    }
+    .parcours-text p, .parcours-text li {
+        font-size: 1.0em !important;
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -241,10 +258,56 @@
         }
         .parcours-content {
             display: flex;
-            flex-direction: column;
         }
         .parcours-images {
             display: flex;
             flex-direction: row;
         }
+        .parcours-section-add img {
+            height: 100px;
+        }
+        .parcours-section-add  {
+            margin-left: 20px;
+        }
+
+        .list-stage-img img{
+            height: 50px;
+            width: 80px;
+        }
+}
+@media (max-width: 375px) {
+    .parcours-section h3 {
+        font-size: 0.8em !important;
+    }
+    .parcours-text p, .parcours-text li {
+        font-size: 0.8em !important;
+    }
+}
+@media (max-width: 350px) {
+    .parcours-section {
+        flex-direction: column;
+    }
+    .parcours-section-text {
+        width: 70%;
+    }
+    .list-stage-img {
+        flex-direction: row;
+        padding-left: 0;
+    }
+    .list-stage-img img {
+        height: 40px;
+        width: 70px;
+    }
+    .parcours-section-add {
+        margin-left: 0;
+    }
+}
+
+@media (min-height: 820px) {
+    .parcours-section h3 {
+        font-size: 1.5em;
+    }
+    .parcours-text p, .parcours-text li {
+        font-size: 1.5em ;
+    }
 }

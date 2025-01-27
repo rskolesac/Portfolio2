@@ -4,8 +4,20 @@ import { motion } from 'framer-motion';
 function About() {
     const bubblesRef = useRef([]);
     const [visibleBubbles, setVisibleBubbles] = useState([]);
+    const [isReadyForBubbles, setIsReadyForBubbles] = useState(false);
 
     useEffect(() => {
+        // Simulez une animation de la div précédente
+        const timeout = setTimeout(() => {
+            setIsReadyForBubbles(true);
+        }, 3000); // Remplacez 1000ms par la durée réelle de votre animation précédente.
+
+        return () => clearTimeout(timeout);
+    }, []);
+
+    useEffect(() => {
+        if (!isReadyForBubbles) return;
+
         const observerOptions = {
             threshold: 0.5,
         };
@@ -21,7 +33,6 @@ function About() {
                         return prev;
                     });
                 } else {
-                    // Supprime l'index de `visibleBubbles` lorsque l'élément sort de la vue
                     setVisibleBubbles((prev) => prev.filter((i) => i !== index));
                 }
             });
@@ -40,7 +51,7 @@ function About() {
                 }
             });
         };
-    }, []);
+    }, [isReadyForBubbles]);
 
     const bubbleVariants = (direction) => ({
         hidden: {
@@ -69,39 +80,45 @@ function About() {
         <section className="about-section">
             <h2 className="about-title">À propos de moi</h2>
             <div className="bubbles-container">
-                {['', '', '', '', 'video'].map((type, index) => (
-                    type === 'video' ? (
-                        <motion.div
-                            key={index}
-                            className="bubble bubble-video"
-                            ref={(el) => (bubblesRef.current[index] = el)}
-                            initial="hidden"
-                            animate={visibleBubbles.includes(index) ? 'visible' : 'exit'}
-                            variants={bubbleVariants('right')}
-                        >
-                            <video
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="video-background"
+                {isReadyForBubbles &&
+                    ['', '', '', '', 'video'].map((type, index) =>
+                        type === 'video' ? (
+                            <motion.div
+                                key={index}
+                                className="bubble bubble-video"
+                                ref={(el) => (bubblesRef.current[index] = el)}
+                                initial="hidden"
+                                animate={visibleBubbles.includes(index) ? 'visible' : 'exit'}
+                                variants={bubbleVariants('right')}
                             >
-                                <source src={`${process.env.PUBLIC_URL}/video/stickman.mp4`} type="video/mp4" />
-                                Votre navigateur ne supporte pas la balise vidéo.
-                            </video>
-                            <div className="text-overlay">Combattant et fan de sport de combat</div>
-                        </motion.div>
-                    ) : (
-                        <motion.div
-                            key={index}
-                            className={`bubble bubble${index + 1}`}
-                            ref={(el) => (bubblesRef.current[index] = el)}
-                            initial="hidden"
-                            animate={visibleBubbles.includes(index) ? 'visible' : 'exit'}
-                            variants={bubbleVariants(index % 2 === 0 ? 'left' : 'right')}
-                        />
-                    )
-                ))}
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="video-background"
+                                >
+                                    <source
+                                        src={`${process.env.PUBLIC_URL}/video/stickman.mp4`}
+                                        type="video/mp4"
+                                    />
+                                    Votre navigateur ne supporte pas la balise vidéo.
+                                </video>
+                                <div className="text-overlay">
+                                    Combattant et fan de sport de combat
+                                </div>
+                            </motion.div>
+                        ) : (
+                            <motion.div
+                                key={index}
+                                className={`bubble bubble${index + 1}`}
+                                ref={(el) => (bubblesRef.current[index] = el)}
+                                initial="hidden"
+                                animate={visibleBubbles.includes(index) ? 'visible' : 'exit'}
+                                variants={bubbleVariants(index % 2 === 0 ? 'left' : 'right')}
+                            />
+                        )
+                    )}
             </div>
         </section>
     );
