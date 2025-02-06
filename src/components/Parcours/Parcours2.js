@@ -25,7 +25,7 @@ function Parcours2() {
 
                     <div className="parcours-section">
                         <div className='parcours-section-text'>
-                            <h3>Experiences Professionnels </h3>
+                            <h3>Experiences Professionnelles </h3>
                             <p>
                             J'ai fais du babysitting pendant 2 ans,<br/> j'ai réalisé plusieurs mois de tutorat à des élèves secondes (2021), <br />
                             enfin j'ai travaillé au restaurant Sehhauss à Munich en (2022) <br/> j'ai réalisé des missions Fiverr en Freelance (2023)

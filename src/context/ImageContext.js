@@ -2,11 +2,11 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const images = [
     `${process.env.PUBLIC_URL}/image/scolarité.webp`,
+    `${process.env.PUBLIC_URL}/image/e-commerce.webp`,
     `${process.env.PUBLIC_URL}/image/informatique.webp`,
+    `${process.env.PUBLIC_URL}/image/data-analysis.webp`,
     `${process.env.PUBLIC_URL}/image/mma.webp`,
-    `${process.env.PUBLIC_URL}/image/trail.webp`,
-    `${process.env.PUBLIC_URL}/image/musique.webp`,
-    `${process.env.PUBLIC_URL}/image/design.webp`,
+    `${process.env.PUBLIC_URL}/image/voyage.webp`,
 ];
 
 const ImageContext = createContext();

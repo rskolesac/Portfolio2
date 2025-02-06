@@ -7,7 +7,7 @@ function Navbar() {
     const location = useLocation();
 
     // Appliquez une classe différente si l'utilisateur est sur la page `cv`
-    const isParcoursPage = location.pathname === '/parcours';
+    const isParcoursPage = location.pathname === '/parcours' || 'projet1';
     const navbarClass = isParcoursPage ? 'navbar cv-style' : 'navbar default-style';
 
     return (

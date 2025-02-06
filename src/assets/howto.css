@@ -1,0 +1,46 @@
+.howto-container {
+    text-align: center;
+    padding: 40px;
+    border-top : solid 1px #fff;
+  }
+  
+  .howto-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .howto-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .howto-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .howto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .howto-card-title {
+    font-size: 20px;
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  .howto-card-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+  }
+  

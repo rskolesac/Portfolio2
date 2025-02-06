@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../assets/style.css';
 import { ReactTyped } from 'react-typed';
 import DelayedRender from './DelayedRender';
+import { Link } from 'react-router-dom';
 
 function Hero() {
     const [isActive, setIsActive] = useState(false);
@@ -87,9 +88,7 @@ function Hero() {
                 <DelayedRender delay={2000}>
                     <div className="Hero-list">
                         <ul>
-                            <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
-                                Projet 1
-                            </li>
+                            <li><Link to="/projet1">Projet1</Link></li>
                             <li onClick={(event) =>handleClick(event, window.innerWidth < 1000 ? `${process.env.PUBLIC_URL}/image/loaderSmall.png` : `${process.env.PUBLIC_URL}/image/loader.png`)}>
                                 Projet 2
                             </li>

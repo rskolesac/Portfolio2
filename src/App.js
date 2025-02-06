@@ -5,8 +5,11 @@ import "./assets/style.css"
 import "./assets/layout.css"
 import "./assets/parcours.css"
 import "./assets/apropos.css"
+import "./assets/projet1.css"
+import "./assets/howto.css"
 import AproposPage from './Page/AproposPage';
 import CVPage from "./Page/CVPage";
+import Projet1 from "./Page/Projets/Projet1";
 import { ImageProvider } from './context/ImageContext';
 
 function RedirectHandler() {
@@ -31,6 +34,7 @@ function App() {
             <RedirectHandler />
             <Routes>
                 <Route path="/" element={<AcceuilPage />} />
+                <Route path="projet1" element={<Projet1 />} />
                 <Route path="/parcours" element={
                     <ImageProvider>
                         <AproposPage/>
