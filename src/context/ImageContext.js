@@ -6,7 +6,7 @@ const images = [
     `${process.env.PUBLIC_URL}/image/informatique.webp`,
     `${process.env.PUBLIC_URL}/image/data-analysis.webp`,
     `${process.env.PUBLIC_URL}/image/mma.webp`,
-    `${process.env.PUBLIC_URL}/image/voyage.webp`,
+    `${process.env.PUBLIC_URL}/image/avion.png`,
 ];
 
 const ImageContext = createContext();

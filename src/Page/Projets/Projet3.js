@@ -5,22 +5,21 @@ import Presentation from '../../components/Projets/Presentation';
 import Techno from '../../components/Projets/Techno';
 import { projetsData } from '../../data/projets.js';
 
-function Projet1() {
-    useEffect(() => {
-        // Réinitialiser les styles du body
-        document.body.style.overflow = '';
-        document.body.style.height = '';
-        document.body.classList.remove('menu-open');
-        
-        return () => {
-            // Cleanup si nécessaire
+function Projet3() {
+        useEffect(() => {
+            // Réinitialiser les styles du body
             document.body.style.overflow = '';
             document.body.style.height = '';
-        };
-    }, []);
-
+            document.body.classList.remove('menu-open');
+            
+            return () => {
+                // Cleanup si nécessaire
+                document.body.style.overflow = '';
+                document.body.style.height = '';
+            };
+        }, []);
     // Utiliser le premier projet des données
-    const projetData = projetsData.projet1;
+    const projetData = projetsData.projet3;
 
     return (
         <div className="projet1-page">
@@ -34,4 +33,4 @@ function Projet1() {
     );
 }
 
-export default Projet1;
+export default Projet3;

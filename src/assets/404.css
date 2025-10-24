@@ -1,0 +1,46 @@
+.not-found {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.not-found-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.not-found h1 {
+    font-size: 8rem;
+    color: #6B46C1;
+    margin: 0;
+    line-height: 1;
+}
+
+.not-found h2 {
+    font-size: 2rem;
+    color: #2D3748;
+    margin: 1rem 0;
+}
+
+.not-found p {
+    color: #4A5568;
+    margin-bottom: 2rem;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #6B46C1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #553C9A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 70, 193, 0.2);
+}

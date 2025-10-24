@@ -13,14 +13,24 @@ function Skill() {
             items: ['Express', 'Middleware', 'REST APIs', 'WebSockets'],
             imageSrc: `${process.env.PUBLIC_URL}/image/node.webp`
         },
-        SQL: {
-            items: ['Queries', 'Joins', 'Indexing', 'Database Design'],
-            imageSrc: `${process.env.PUBLIC_URL}/image/sql.png`
+        Python: {
+            items: ['Data Science', 'Panda', 'Scripting', 'Automation'],
+            imageSrc: `${process.env.PUBLIC_URL}/image/python.jpeg`
         },
         C: {
             items: ['Pointers', 'Memory Management', 'Data Structures', 'Algorithms'],
             imageSrc: `${process.env.PUBLIC_URL}/image/C.jpeg`
+        },
+        Cpp: {
+            items: ['Concurrency', 'ML', 'OOP', 'STL', "Performance Optimization"],
+            imageSrc: `${process.env.PUBLIC_URL}/image/cpp.png`
+        },
+            
+        PowerBI: {
+            items: ['Data Visualization', 'DAX', 'Power Query', 'Reports'],
+            imageSrc: `${process.env.PUBLIC_URL}/image/powerbi.jpeg`
         }
+
     };
 
     const handleSkillClick = (skill) => {

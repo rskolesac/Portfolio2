@@ -1,0 +1,176 @@
+/* Bouton : fixe pour éviter le clipping par les parents */
+.hamburger-button {
+  position: fixed; /* <- fixed, plus fiable */
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.hamburger-button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  transition: all .3s ease;
+}
+
+/* Panneau : fixe et slide avec transform (plus fiable que right:-100%) */
+.hamburger-menu {
+  position: fixed;
+  inset: 0 0 0 auto; /* top:0; right:0; bottom:0; left:auto */
+  width: 100%;
+  height: 100vh;
+  background: rgba(255,255,255,.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%); /* hors écran */
+  transition: transform .3s ease, opacity .3s ease;
+  opacity: 0;
+  z-index: 2147483646;
+  pointer-events: none; /* désactivé fermé */
+}
+
+.hamburger-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto; /* activé ouvert */
+}
+
+.menu-list { list-style: none; padding: 0; margin: 0; max-width: 800px; width: 100%; }
+.menu-list li {
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform .3s ease, color .3s ease;
+}
+.menu-list li:hover { color: #666; transform: translateX(5px); }
+
+/* Menu hamburger */
+.menu-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: 0.3s;
+}
+
+.menu-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu-nav {
+    position: absolute;
+    top: 300px;
+    right: 0;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.menu-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-nav li {
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-nav li:hover {
+    background: #f5f5f5;
+}
+
+/* Ajouts pour le responsive */
+@media (max-width: 768px) {
+    .menu-btn {
+        width: 25px;
+        height: 25px;
+    }
+    .menu-nav {
+        top: 200px;
+    }
+
+    .menu-nav li {
+        
+        font-size: 12px;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-btn {
+        top: 15px;
+        right: 15px;
+    }
+
+    .menu-nav li {
+        font-size: 10px;
+        margin: 10px 0;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .menu-nav {
+        padding: 60px 20px;
+        overflow-y: auto;
+    }
+
+    .menu-nav li {
+        margin: 8px 0;
+    }
+}

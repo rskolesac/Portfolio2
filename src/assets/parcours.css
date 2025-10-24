@@ -1,313 +1,381 @@
+/* Reset et variables */
+:root {
+    --spacing: clamp(1rem, 2vw, 2rem);
+    --content-width: min(90vw, 1200px);
+}
+
+/* Layout de base */
 .parcours-page {
-    position: fixed;
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed; /* Garde l'image de fond fixe */
-    background-position: center;
-    background-color: white;
-}
-
-
-.horizontal-scroll-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Active le snap automatique */
+    min-height: 100vh;
     width: 100vw;
-    height: 100%; /* Prend toute la hauteur de l'écran */
-}
-
-.scroll-slide {
-    display: block;
-    width: 100vw;
-    align-items: center;
-    width: 100vw;
-    padding: 20px;
-}
-
-.scroll-content {
-    padding: 20px;
-    border-radius: 15px;
-    margin-left: 5%;
+    overflow-x: hidden;
+    background: white;
 }
 
 .parcours-container {
-    display: block;
-    width: 100vw;   
+    width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--spacing);
 }
 
-.parcours-content {
+/* Layout pour le défilement horizontal */
+.horizontal-scroll-container {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden; /* Empêche le scroll vertical */
+    scroll-snap-type: x proximity; /* Changé de mandatory à proximity pour un défilement plus fluide */
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Améliore le défilement sur iOS */
+}
+
+.scroll-slide {
+    flex: 0 0 100%;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center; /* Changé de start à center */
+    scroll-snap-stop: always;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Empêche le débordement */
+}
+
+/* Contenu du slide */
+.parcours-section {
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    padding: 0 5%;
+}
+
+.parcours-section-text {
+    flex: 0 0 60%;
+    overflow-y: auto;
 }
 
 .parcours-images {
+    flex: 0 0 35%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-right: 200px;
-    margin-left: 200px;
-}
-.parcours-images img {
-    transition: transform 0.3s ease, box-shadow 0.5s ease; /* Transition pour un effet fluide */
+    gap: 2rem;
+    align-items: center;
 }
 
-.parcours-image {
-    width: 400px; /* Ajustez la largeur selon vos besoins */
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte */
-}
-
-.parcours-images img:hover {
-    cursor: pointer;
-    transform: scale(1.05); /* Augmente légèrement la taille de l'image au survol */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Ombre encore plus intense au survol */
-}
-
-.parcours-section-1 {
-    height: 100%;
-}
-
-.parcours-section {
-    margin-right: 100px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.parcours-section-text {
-    width: 50%;
-}
-.parcours-section-add {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-}
-.parcours-section-add img {
-    width: 100%;
-    height: 200px;
-}
-.list-stage-img {
-    display: flex;
-    flex-direction: row;
-}
-.list-stage-img img{
-    display: flex;
-    flex-direction: row;
-    width: 120px;
-    height: 120px;
-    padding: 1em;
-    
-}
+/* Styles de texte */
 .parcours-text {
-    padding-top: 30px;
-    max-height: 80vh;
-    overflow: hidden;
-    overflow-y: scroll;
-    width: 100%;
-}
-
-.parcours-text h2 {
-    font-size: 2.5rem;
     color: #333;
 }
 
-.parcours-text h3 {
-    font-size: 2.5rem;
-    color: #555;
-    font-family: 'Courier New', Courier, monospace;
+.parcours-text h2 { 
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
 }
 
-.parcours-text p, .parcours-text li {
-    font-size: 1.5rem;
-    color: #666;
+.parcours-text h3 { 
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    margin-bottom: 0.8rem;
+}
+
+.parcours-text p, 
+.parcours-text li { 
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.6;
-    list-style: none;
+    margin-bottom: 0.5rem;
 }
 
-.etude-sup {
-    position: relative;
+/* Images - Styles simplifiés */
+.parcours-image {
+    width: clamp(250px, 80%, 400px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.list-stage-img {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
 }
 
-.etude-sup img {
-    position: absolute;
-    width: 120px;
-    right: 5%;
-    top: 0;
-}
-.skills-list {
-    margin: 0;
-    padding: 0;
+.list-stage-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
 }
 
+.parcours-section-add img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
 
-@media (max-width: 1450px) {
-    .parcours-image {
-        width: 350px; /* Ajustez la largeur selon vos besoins */
+/* Ajuster le conteneur d'images */
+.parcours-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+/* Styles de texte */
+.parcours-text {
+    color: #333;
+}
+
+.parcours-text h2 { 
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.parcours-text h3 { 
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    margin-bottom: 0.8rem;
+}
+
+.parcours-text p, 
+.parcours-text li { 
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Images - Styles améliorés */
+.parcours-images {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.parcours-image {
+    width: clamp(250px, 80%, 400px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.parcours-image:hover {
+    transform: scale(1.05);
+}
+
+/* Images des stages */
+.list-stage-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.list-stage-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Images supplémentaires */
+.parcours-section-add img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ajustement pour 3 images */
+.list-stage-img:has(> img:nth-child(3)) img {
+    width: 150px;  /* Réduit de 30px par rapport aux 100px initiaux */
+    height: 150px;
+}
+
+.parcours-section-add:has(> img:nth-child(3)) img {
+    width: 150px;  /* Réduit de 30px par rapport aux 180px initiaux */
+}
+
+.parcours-images:has(> .parcours-image:nth-child(3)) .parcours-image {
+    width: calc(clamp(250px, 80%, 400px) - 30px);
+}
+
+/* Ajustements responsive */
+@media (max-width: 1300px) {
+    .horizontal-scroll-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+        scroll-snap-type: y proximity; /* Même changement pour le mode vertical */
     }
-    .etude-sup img {
+
+    .scroll-slide {
+        flex: none;
+        min-height: 100vh;
+        height: auto;
+        width: 100%;
+        scroll-snap-align: center; /* Changé à center */
+        overflow-y: visible;
+    }
+
+    .parcours-section {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    .parcours-section-text,
+    .parcours-images {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .parcours-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    /* Ajuster les tailles des images pour mobile */
+    .parcours-image {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .list-stage-img {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ...existing code... */
+    
+    .parcours-image {
+        width: 60%;
+        max-width: 200px;
+    }
+
+    .list-stage-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .parcours-section-add img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Ajustement pour 3 images en mobile */
+    .list-stage-img:has(> img:nth-child(3)) img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .parcours-section-add:has(> img:nth-child(3)) img {
         width: 100px;
     }
 }
-@media (max-width: 1250px) {
+
+@media (max-width: 400px) {
     .parcours-image {
-        width: 300px; /* Ajustez la largeur selon vos besoins */
+        width: 40%;
+        max-width: 150px;
     }
-    .etude-sup img {
+
+    .list-stage-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .parcours-section-add img {
         width: 80px;
     }
-    .parcours-section h3 {
-        font-size: 1.0em;
-    }
-    .parcours-text p, .parcours-text li {
-        font-size: 0.8rem;
-    }
-    .parcours-images {
-        margin-right: 150px;
-        margin-left: 150px;
+
+    /* Ajustement pour 3 images en très petit mobile */
+    .list-stage-img:has(> img:nth-child(3)) img {
+        width: 45px;
+        height: 45px;
     }
 
-}
-
-@media (max-width: 1050px) {
-    .parcours-images {
-        margin-right: 100px;
-        margin-left: 100px;
-    }
-    .parcours-section-add img {
-        height: 150px;
-    }
-    .list-stage-img {
-        flex-direction: column;
-    }
-    .list-stage-img img {
-        height: 100px;
-    }
-}
-
-@media (max-width: 930px) {
-    .parcours-image {
-        width: 250px; /* Ajustez la largeur selon vos besoins */
-    }
-    .parcours-images {
-        margin-right: 50px;
-        margin-left: 50px;
-    }
-    .etude-sup img {
-        top: -20% !important;
-        width: 80px;
-    }
-}
-
-@media (max-width: 750px) {
-    .parcours-image {
-        width: 200px; /* Ajustez la largeur selon vos besoins */
-    }
-    .etude-sup img {
-        width: 50px;
-        top: 0 !important;
-    }
-    .parcours-section {
-        margin-right: 50px !important;
-    }
-    .parcours-section-add img {
-        height: 120px;
-    }
-    .list-stage-img img {
-        height: 80px;
-    }
-}
-@media (max-width: 650px) {
-    .parcours-images {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    .parcours-image {
-        width: 150px; /* Ajustez la largeur selon vos besoins */
-    }
-    .list-stage-img img {
-        height: 70px;
-    }
-    .parcours-section h3 {
-        font-size: 1.0em !important;
-    }
-    .parcours-text p, .parcours-text li {
-        font-size: 1.0em !important;
-    }
-
-}
-
-@media (max-width: 550px) {
-
-    .etude-sup img {
-        top: -10% !important;
-    }
-}
-@media (max-width: 500px) {
-        .etude-sup img {
-            width: 40px;
-        }
-        .parcours-images {
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-        .parcours-image {
-            width: 100px; /* Ajustez la largeur selon vos besoins */
-        }
-        .parcours-content {
-            display: flex;
-        }
-        .parcours-images {
-            display: flex;
-            flex-direction: row;
-        }
-        .parcours-section-add img {
-            height: 100px;
-        }
-        .parcours-section-add  {
-            margin-left: 20px;
-        }
-
-        .list-stage-img img{
-            height: 50px;
-            width: 80px;
-        }
-        .parcours-section {
-            flex-direction: column;
-        }
-        .parcours-section-text {
-            width: 100%;
-        }   
-        .list-stage-img {
-            flex-direction: row;
-            padding-left: 0;
-        }
-}
-@media (max-width: 375px) {
-    .parcours-section h3 {
-        font-size: 0.8em !important;
-    }
-    .parcours-text p, .parcours-text li {
-        font-size: 0.8em !important;
-    }
-}
-@media (max-width: 350px) {
-    .list-stage-img img {
-        height: 40px;
+    .parcours-section-add:has(> img:nth-child(3)) img {
         width: 70px;
     }
-    .parcours-section-add {
-        margin-left: 0;
+
+    /* Ajuster l'espacement */
+    .parcours-images {
+        gap: 1rem;
+    }
+
+    .list-stage-img {
+        gap: 0.5rem;
+        padding: 0.5rem;
     }
 }
 
-@media (min-height: 820px) {
-    .parcours-section h3 {
-        font-size: 1.5em;
+/* Style de la scrollbar horizontale */
+.horizontal-scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+/* Styles de la scrollbar */
+.cv-content {
+    /* Style de la scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.cv-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cv-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cv-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Ajuster la taille du texte pour mieux s'adapter */
+@media (max-height: 800px) {
+    .cv-content {
+        font-size: 0.9em;
     }
-    .parcours-text p, .parcours-text li {
-        font-size: 1.5em ;
+}
+
+@media (max-height: 600px) {
+    .cv-content {
+        font-size: 0.8em;
     }
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
