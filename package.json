@@ -2,7 +2,7 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rskolesac.github.io/Portfolio2",
+  "homepage": "https://robincrf.github.io/Portfolio2",
   "dependencies": {
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
