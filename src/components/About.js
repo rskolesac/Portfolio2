@@ -7,13 +7,32 @@ function About() {
     const [isReadyForBubbles, setIsReadyForBubbles] = useState(false);
 
     useEffect(() => {
-        // Simulez une animation de la div précédente
-        const timeout = setTimeout(() => {
-            setIsReadyForBubbles(true);
-        }, 3000); // Remplacez 1000ms par la durée réelle de votre animation précédente.
+        const bubbles = bubblesRef.current; // Stocker la référence dans une variable locale
+        if (!bubbles) return;
 
-        return () => clearTimeout(timeout);
-    }, []);
+        // Configuration des bulles
+        const bubblesConfig = {
+            threshold: 0.5,
+        };
+
+        // Initialisation des bulles
+        const initBubbles = () => {
+            setIsReadyForBubbles(true);
+        };
+
+        initBubbles();
+
+        // Cleanup function utilisant la variable locale
+        return () => {
+            if (bubbles) {
+                bubbles.forEach((bubble) => {
+                    if (bubble) {
+                        bubblesConfig.unobserve(bubble);
+                    }
+                });
+            }
+        };
+    }, []); // La dépendance reste vide car on capture la ref au début de l'effet
 
     useEffect(() => {
         if (!isReadyForBubbles) return;
